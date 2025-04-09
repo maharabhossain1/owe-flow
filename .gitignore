@@ -39,3 +39,18 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Cache Files
+.eslintmdcache
+.stylelintcache
+.prettiercache
+
+# Jest
+coverage
+.swc
+junit.xml
+
+# Storybook
+storybook-static
+build-storybook.log
+.nyc_output
