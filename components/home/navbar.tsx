@@ -3,7 +3,7 @@ import Logo from '@/public/logo.svg';
 
 const Navbar = () => {
   return (
-    <nav className="container m-auto flex max-w-6xl items-center justify-between py-4">
+    <nav className="container m-auto flex max-w-6xl items-center justify-between py-6">
       <div className="flex items-center gap-2">
         <Logo className="h-12 w-40" />
       </div>
