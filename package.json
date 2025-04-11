@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "nvm-setup": "bash -c 'source \"$NVM_DIR/nvm.sh\" && nvm use || nvm install'",
+    "dev": "npm run nvm-setup && next dev",
+    "build": "npm run nvm-setup && next build",
+    "start": "npm run nvm-setup && next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "prettier": "prettier \"**/*.{js,jsx,ts,tsx,md,mdx,json,yml,css}\" --check --cache --cache-strategy=content --cache-location=.prettiercache",
