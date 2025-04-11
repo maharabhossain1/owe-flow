@@ -4,6 +4,7 @@ import '@/app/globals.css';
 import { setRequestLocale } from 'next-intl/server';
 
 import { defaultLocale, getAvailableLocalesMap } from '@/i18n/settings';
+import { LocaleProvider } from '@/providers/locale-provider';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -40,7 +41,7 @@ export default async function RootLayout({
         suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <LocaleProvider>{children}</LocaleProvider>
       </body>
     </html>
   );
