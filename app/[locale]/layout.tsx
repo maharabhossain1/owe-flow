@@ -1,19 +1,10 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
 import '@/app/globals.css';
 import { setRequestLocale } from 'next-intl/server';
 
 import { defaultLocale, getAvailableLocalesMap } from '@/i18n/settings';
-
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-});
+import { bricolage_grotesque, kreon, roboto } from '@/lib/fonts';
+import { LocaleProvider } from '@/providers/locale-provider';
 
 export const metadata: Metadata = {
   title: 'OweFlow',
@@ -34,13 +25,19 @@ export default async function RootLayout({
   const localesMap = getAvailableLocalesMap();
   const { langDir, hrefLang } = localesMap[locale] || defaultLocale;
 
+  const fontClasses = [
+    roboto.variable,
+    kreon.variable,
+    bricolage_grotesque.variable,
+  ].join(' ');
+
   return (
-    <html lang={hrefLang} dir={langDir}>
+    <html lang={hrefLang} dir={langDir} className={`${fontClasses}`}>
       <body
         suppressHydrationWarning
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`font-bricolage_grotesque antialiased`}
       >
-        {children}
+        <LocaleProvider>{children}</LocaleProvider>
       </body>
     </html>
   );

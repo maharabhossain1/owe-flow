@@ -27,7 +27,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "icons.d.ts"
+    "icons.d.ts",
+    "scripts/test-db.mjs"
   ],
   "exclude": ["node_modules", ".next"]
 }

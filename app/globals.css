@@ -6,8 +6,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-roboto: var(--font-roboto);
+  --font-kreon: var(--font-kreon);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -70,7 +70,7 @@
   --purple-500: #9e77ed;
   --purple-600: #7f56d9;
   --purple-700: #6941c6;
-  --purple-800: #5338e9;
+  --purple-800: #53389e;
   --purple-900: #42307d;
   --purple-950: #2c1c5f;
 
