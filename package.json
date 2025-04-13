@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "@bprogress/next": "^3.2.10",
+    "@neondatabase/serverless": "^1.0.0",
     "@next/bundle-analyzer": "^15.2.5",
     "babel-plugin-react-compiler": "19.0.0-beta-e993439-20250405",
     "class-variance-authority": "^0.7.1",
