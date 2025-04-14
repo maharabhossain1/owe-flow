@@ -41,13 +41,13 @@ const Navbar = () => {
       </div>
       <div className="hidden items-center rounded-full border border-white/50 bg-white/75 bg-gradient-to-r from-pink-100/40 via-violet-100/40 to-indigo-100/40  text-sm font-medium text-gray-800 shadow-lg ring-1 shadow-gray-500/5 ring-gray-500/[.075] backdrop-blur-xl xl:flex">
         <Link
-          href="/login"
+          href="/sign-in"
           className="m-0.5 rounded-l-full rounded-r-xl bg-neutral-50/80 px-4 py-2 text-sm font-medium text-gray-700 backdrop-blur-xl hover:text-gray-900"
         >
           Log in
         </Link>
         <Link
-          href="/signup"
+          href="/register"
           className="m-0.5 rounded-full bg-purple-600 px-4 py-2 text-sm font-medium text-white hover:bg-purple-700"
         >
           Get Started

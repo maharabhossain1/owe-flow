@@ -52,11 +52,13 @@ const nextConfig: NextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 31536000,
   },
-  // compiler: {
-  //   removeConsole: isDev ? {
-  //     exclude: ['error'],
-  //   } : false,
-  // },
+  compiler: {
+    removeConsole: isDev
+      ? {
+          exclude: ['error'],
+        }
+      : false,
+  },
   poweredByHeader: false,
   async headers() {
     return shouldSkipCaching
@@ -169,6 +171,33 @@ const nextConfig: NextConfig = {
       '@radix-ui/react-tabs',
       '@radix-ui/react-toast',
     ],
+  },
+  turbopack: {
+    rules: {
+      '*.svg': {
+        loaders: [
+          {
+            loader: '@svgr/webpack',
+            options: {
+              prettier: false,
+              svgo: true,
+              svgoConfig: {
+                plugins: [
+                  {
+                    name: 'preset-default',
+                    params: {
+                      overrides: {
+                        removeViewBox: false,
+                      },
+                    },
+                  },
+                ],
+              },
+            },
+          },
+        ],
+      },
+    },
   },
 };
 
